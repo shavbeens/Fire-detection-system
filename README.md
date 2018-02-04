@@ -47,9 +47,11 @@ The Three Pins of the Flame Sensor are Color coded and are as follows:
 ###### [Data Collection Class](https://github.com/ilhamrahman/F5/blob/master/DCU/src/DataCollectionClass.java)
 Java Class in charge of gathering information from the arduino UNO microprocessor. This class will acess the serial port of the RPi using the JSerialComm library. This Class recieves the raw data from the microprocessor which it will convert to usable data in degrees celcius, fire status, and smoke status for the temperature sensor, flame sensor, and smoke sensor respectively. 
 ###### [Sender](https://github.com/ilhamrahman/F5/blob/master/DCU/src/Sender.java)
+This class uses a simple Java packet sender and reciever system to send the data to a port that the DHU is listening in. This means that the DHU need to be run first with the open port listetning before sending data packets to it. 
 
 ## Raspberry Pi2: Data Handling Unit (DHU)
 ###### [Receiver](https://github.com/ilhamrahman/F5/blob/master/DHU/src/Receiver.java)
+This is the reciever class that is listening in the port the data is being sent on. This class will send the data to the Data Analysis Class to be processed into information that can be read in the Android Application.
 ###### [Data Analysis Class](https://github.com/ilhamrahman/F5/blob/master/DHU/src/DataAnalysis.java)
 ###### [Sender](https://github.com/ilhamrahman/F5/blob/master/DHU/src/Sender.java)
 ###### [Database](https://github.com/ilhamrahman/F5/blob/master/DHU/src/Database.java)
