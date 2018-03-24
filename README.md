@@ -58,3 +58,4 @@ This is the reciever class that is listening in the port the data is being sent 
 
 ## Android Application
 ###### [FFS_APP](https://github.com/ilhamrahman/F5/tree/master/FFS_app)
+Basic android application that was used to transmit the data collected from the device to the user. This application would use TCP to grab packets of data from the DHU, and would provide a real time display when the user requests to see data. 
